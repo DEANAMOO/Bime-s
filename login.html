@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <form action="#">
+            <fieldset class="login">
+                <img src="image/Bime_S_biglogo.png" alt="" class="logo_img">
+                <input type="text" class="id login_div" placeholder="Id">
+                <input type="password" class="password login_div" placeholder="Password">
+                <input type="submit" value="Login" class="submit login_div">
+                <select name="system_select" id="drop_down_menu">
+                    <option value="Bime'S BIS" selected disabled hidden>시스템을 선택 후 로그인이 가능합니다</option>
+                    <option value="BIS">Bime'S BIS</option>
+                    <option value="EM">Bime'S EM</option>
+                    <option value="FM">Bime'S FM</option>
+                </select>
+                <p>Version 1.0.0 / Copyright TSMTechnology, Inc</p>
+            </fieldset>
+        </form>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.id,.password').attr('disabled', 'disabled')
+    })
+
+    $('#drop_down_menu').on('change', function () {
+        $('.id,.password').attr('disabled', false)
+    });
+
+
+</script>
+
+</html>

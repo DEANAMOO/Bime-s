@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/layout arrowtype1.css">
+    <link rel="stylesheet" type="text/css" href="css/css/all.min.css">
+</head>
+
+<body>
+    <div class="submenu" id="submenu">
+        <div class="mainlogo"></div>
+        <div class="active_top_menu"><br></div>
+        <ul></ul>
+    </div>
+    <div class="header" id="header">
+        <div class="header_menu">
+            <span class="border"></span>
+            <div class="menu" value="sidemenu/sidemenu_1.html">자동제어설비</div>
+            <span class="border"></span>
+            <div class="menu" value="sidemenu/sidemenu_2.html">기계설비제어</div>
+            <span class="border"></span>
+            <div class="menu" value="sidemenu/sidemenu_1.html">전력/조명제어</div>
+            <span class="border"></span>
+            <div class="menu" value="sidemenu/sidemenu_2.html">출입통제</div>
+            <span class="border"></span>
+            <div class="menu" value="sidemenu/sidemenu_1.html">방송시스템</div>
+            <span class="border"></span>
+            <div class="menu" value="sidemenu/sidemenu_2.html">빌딩안내</div>
+            <span class="border"></span>
+            <div class="menu" value="sidemenu/sidemenu_1.html">회의실 예약</div>
+            <span class="border"></span>
+        </div>
+        <div class="admin_btn">
+            <i class="fas fa-tachometer-alt">
+                <p>EM</p>
+            </i>
+        </div>
+        <div class="admin_btn">
+            <i class="fas fa-industry">
+                <p>FM</p>
+            </i>
+        </div>
+        <div class="admin_btn">
+            <i class="fas fa-cogs">
+                <p>Setting</p>
+            </i>
+        </div>
+        <div class="admin_btn">
+            <i class="fas fa-sign-out-alt">
+                <p>Logout</p>
+            </i>
+        </div>
+    </div>
+    <div class="maincontent" id="maincontent">
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    function div2Resize() {
+        var maincontent = document.getElementById('maincontent');
+        maincontent.style.height = window.innerHeight - 60 + 'px';
+        maincontent.style.width = window.innerWidth - 250 + 'px';
+        var submenu = document.getElementById('submenu');
+        submenu.style.height = window.innerHeight;
+        var submenuul = document.querySelector('.submenu>ul');
+        submenuul.style.height = window.innerHeight - 155 + 'px';
+    }
+    $(document).ready(function () {
+        div2Resize();
+
+        // 브라우저 크기가 변할 시 동적으로 사이즈를 조절해야 하는경우
+        window.addEventListener('resize', div2Resize);
+        $('.menu').click(function () {
+            var value = $(this).attr('value')
+            $.ajax({
+                url: value,
+                dataType: "text",
+                success: function (data) {
+                    $('a').removeClass('active');
+                    $(".submenu>ul").html(data);
+                }
+            });
+        })
+        $('.header_menu>div').click(function () {
+            $('.active_top_menu').html($(this).html())
+        })
+        $('.menu:first').click();
+    });
+</script>
+
+</html>

@@ -1,0 +1,231 @@
+/* 기본설정 */
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Malgun Gothic";
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    user-select:none;
+}
+html,body{
+    height: 100%;
+    font-size: 10px;
+    background-color: #1e1e1e;
+}
+
+ul,li{
+    list-style: none;
+}
+
+/* 좌측메뉴 */
+.submenu{
+    float: left;
+    width: 250px;   
+    height: 100%;
+    background-color: #272630;
+    font-size: 1.3rem;
+}
+/* .submenu>ul{
+    margin-top: -1px;
+    height: 815px;
+} */
+/* 스크롤바 설정 */
+.submenu>ul{
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+}
+.submenu>ul:hover{
+    overflow-y: auto;
+}
+.submenu>ul::-webkit-scrollbar{
+    width: 10px;
+}
+.submenu>ul::-webkit-scrollbar-thumb{
+    background-color: #484e55;
+}
+/* 서브 메뉴 단계별 여백 조절 */
+.submenu>ul>li>ul li{
+    width: 250px;
+    margin: 5px 0px;
+    padding: 0px 25px;
+}
+.submenu>ul>li>ul>ul li{
+    padding-left:50px;
+}
+.submenu>ul>li>ul>ul>ul li,.box3{
+    padding-left:75px;
+}
+/* 서브메뉴 버튼별 여백 조절 */
+.box1{
+    padding-left:10px;
+}
+.box2{
+    padding-left:35px;
+}
+.box3{
+    padding-left:60px;
+}
+/* 메인로고 */
+.mainlogo{
+    position: fixed;
+    width: 250px;
+    height: 120px;
+    padding: 10px;
+    background:url('../image/bime\'s_edit.png') no-repeat center;
+    animation: bright 1.5s 0s infinite alternate;
+    /* filter: brightness(160%); */
+}
+@keyframes bright {
+    from {  filter: brightness(120%);}
+    to {  filter: brightness(160%);}
+}
+/* 좌측메뉴 열고 닫는 버튼 */
+.box {
+    width: 250px;
+    margin-top: 5px;
+    border: none;
+    /* border-bottom: 2px solid gray; */
+    background-color: #272630;
+    font-size: 1.3rem;
+    font-weight: bold;  
+    text-align:left;
+    outline: none;
+}
+/* 단계별 화살표 색상변화 */
+.box1::before{
+    color: rgb(122, 145, 247);
+    margin:0px 5px;
+    font-size: 1.6rem;
+    font-family: 'Font Awesome\ 5 Free';
+    content:"\f0da "
+}
+.box2::before{
+    color: rgb(192, 84, 51);
+    margin:0px 5px;
+    font-size: 1.6rem;
+    font-family: 'Font Awesome\ 5 Free';
+    content:"\f0da "
+}
+.box3::before{
+    color: rgb(238, 240, 118);
+    margin:0px 5px;
+    font-size: 1.6rem;
+    font-family: 'Font Awesome\ 5 Free';
+    content:"\f0da "
+}
+.unfoldbox::before{
+    font-size: 1.6rem;
+    margin:0px 5px;
+    font-family: 'Font Awesome\ 5 Free';
+    content:"\f0d7 ";
+}
+
+/* 마우스 올릴시 좌측메뉴 활성화 */
+.submenu>ul>li>ul li:hover,.box:hover{
+    background-color: #484e55;
+    color: white;
+    cursor: pointer;
+}
+.submenu>ul>li>ul>li a:hover{
+    background-color: #484e55;
+    color: white;
+}
+/* 클릭시 메뉴 활성화 */
+.submenu>ul>li>ul>li a{
+    display: block;
+    width: 180px;
+    height: 100%;
+    padding: 1px;
+    text-decoration: none;
+}
+/*좌측메뉴에 상단메뉴 정보 표시*/
+.active_top_menu{
+    width: 230px;
+    padding-bottom: 15px;
+    margin: 110px auto 0px auto;
+    border-bottom: 3px solid #036;
+    border-image: linear-gradient(to right, #67FBFF 30%, rgb(0, 127, 173) 80%);
+    border-image-slice: 1;
+    font-size: 20px;
+    text-align: center;
+}
+.active{
+    color: red;
+}
+/* 상단 메뉴 */
+.header{
+    display: flex;
+}
+.header_menu{
+    display: flex;
+    overflow: auto;
+    position: relative;
+    flex:20;
+    justify-content: left;
+    align-items: center;
+}
+
+.header_menu,.admin_btn{
+    height: 60px;
+    /* background-color: #32363b; */
+    background-color: #272630;
+    font-size: 1.4rem;
+}
+/* 상단메뉴 크기 설정 */
+.header_menu>div{
+    width: 140px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    cursor: pointer;
+}
+/* 상단메뉴 마우스 갖다댈때 변화 */
+.header_menu>div:hover{
+    background-color: #484e55;
+}
+
+.fas{
+    margin-top: 10px;
+}
+/* 상단메뉴 border 설정 */
+.border{
+    width: 0px;
+    height: 25px;
+    border: 1px solid gray;
+}
+
+/* 설정,로그아웃 버튼 */
+.admin_btn{
+    line-height: 75px;
+    text-align: center;
+    font-size:1.2rem ;
+    cursor: pointer;
+    flex:0 1 70px;
+}
+/* 설정,로그아웃 버튼 클릭시 색변화 */
+.admin_btn:hover{
+    background-color: rgb(0, 96, 141);
+}
+
+/* 메인 px 화면 */
+.maincontent{
+    margin-left: 250px;
+    flex: 1;
+    box-sizing: border-box;
+    color: white;
+    border: 1px solid gray;
+    background: url(../back_img/EM.png) no-repeat;
+    background-position: 55% 50%;
+}
+.fas{
+    margin: 0px;
+    padding: 0px;
+}
+/* 폰트 색깔 설정 */
+.submenu>ul,.box,.active_top_menu,.header_menu,.admin_btn{
+    color: rgb(235, 235, 235);
+}
