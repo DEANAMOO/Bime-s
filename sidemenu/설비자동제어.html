@@ -1,0 +1,39 @@
+<body>
+    <li><button class="box box1">설비자동제어</button>
+        <ul class="toggle_menu">
+            <li><a value='text/1234.txt'>대시보드</a></li>
+            <li>위생 설비</li>
+            <li>공조 설비</li>
+            <li>열원 설비</li>
+            <li>급배기 설비</li>
+            <li>배수 설비</li>
+        </ul>
+    </li>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var href = window.location.pathname.replace('/', '');
+        console.log(href);
+        $('.box::before').css('color', 'red');
+        $(".box").click(function () {
+            $(this).toggleClass('unfoldbox');
+            $(this).next().slideToggle(160);
+            return false;
+        });
+        $('a').click(function () {
+            var value = $(this).attr('value')
+            $.ajax({
+                url: value,
+                dataType: "text",
+                success: function (data) {
+                    $('a').removeClass('active');
+                    $(".maincontent").html(data);
+                    $('a[value="' + value + '"]').toggleClass('active');
+                }
+            });
+        })
+
+    })
+
+</script>

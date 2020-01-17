@@ -1,0 +1,153 @@
+﻿menu_id,menu_level,parent_id,menu_name,menu_tag,default_url,use_yn,leaf_yn,remarks,print_seq
+FMS,0,NULL,FMS,,,Y,N,,0
+H0201,2,H02,불편사항신고내역,,/DS/DiscontentList.aspx,Y,N,,1
+H0202,2,H02,불편사항등록,NULL,/DS/DiscontentReq.aspx,Y,Y,NULL,2
+H0301,2,H03,설문조사목록,NULL,/MN/PollList.aspx,Y,Y,NULL,1
+H0401,2,H04,게시판,,/bbs/sboard_list.aspx?board_gb=FREE,Y,Y,,1
+H0501,2,H05,공지사항,,/app/notice_list.aspx,Y,Y,,1
+H0502,2,H05,정보변경,,/app/change_info.aspx,Y,Y,,2
+M01,1,FMS,시설물관리,facilities,,Y,N,시설물 정보를 관리합니다.,1
+M0101,2,M01,작업관리,,,Y,N,,1
+M010101,3,M0101,작업지시관리,,/WR/WorkPlanManage.aspx,Y,Y,,1
+M010102,3,M0101,작업결과관리,,/WR/WorkResult.aspx,Y,Y,,2
+M010103,3,M0101,예방점검계획관리,,/PM/PreMaintanceV2.aspx,Y,Y,,4
+M010104,3,M0101,표준업무관리,,/PM/StdJobManage.aspx,Y,Y,,5
+M010105,3,M0101,긴급작업 결과관리,,/WR/RapidWorkResult.aspx,Y,Y,,3
+M010106,3,M0101,스케줄현황,,/PM/ScheduleManage.aspx,Y,Y,,6
+M0102,2,M01,설비관리,,,Y,N,,2
+M010201,3,M0102,설비기본정보관리,,/EQ/EquipManage.aspx,Y,Y,,2
+M010206,3,M0102,설비구성품 교체관리,,/EQ/EquipBomAlert.aspx,Y,Y,,4
+M010207,3,M0102,설비구성품관리,,/EQ/EquipBomV2Mng.aspx,Y,Y,,3
+M0103,2,M01,자재관리,,,Y,N,,3
+M010301,3,M0103,자재기본정보관리,,/MT/MatrialManage.aspx,Y,Y,,11
+M010302,3,M0103,자재창고정보관리,,/MT/WareHouseManage.aspx,Y,Y,,12
+M010303,3,M0103,자재신청관리,,/PO/MaterialReqManage.aspx,Y,Y,,13
+M010304,3,M0103,자재견적관리,,/PO/MaterialEstiManage.aspx,Y,Y,,14
+M010305,3,M0103,자재발주관리,,/PO/MaterialOrderManage.aspx,Y,Y,,15
+M010306,3,M0103,자재입고관리,,/MT/MaterialInManage.aspx,Y,Y,,16
+M010307,3,M0103,자재출고관리,,/MT/MaterialOutManage.aspx,Y,Y,,17
+M010308,3,M0103,재고마감처리,,/MT/ClosingStock.aspx,Y,Y,,18
+M0104,2,M01,공기구/비품관리,,,Y,N,,4
+M010401,3,M0104,공구/계측기 정보관리,,/TL/ToolManage.aspx,Y,Y,,21
+M010402,3,M0104,공구/계측기 대여관리,,/TL/ToolRent.aspx,Y,Y,,22
+M010403,3,M0104,검교정관리,,/TL/ToolProof.aspx,Y,Y,,23
+M010404,3,M0104,고장수리관리,,/TL/ToolFix.aspx,Y,Y,,24
+M010405,3,M0104,비품관리,NULL,/TL/ToolEtcManage.aspx,Y,Y,,25
+M0107,2,M01,건물관리,,,Y,N,,7
+M010701,3,M0107,건물정보등록,,/BD/BuildingManage.aspx,Y,Y,,31
+M010702,3,M0107,층정보등록,,/BD/BuildingFloor.aspx,Y,Y,,32
+M010703,3,M0107,위치정보등록,,/BD/BuildingLocation.aspx,Y,Y,,33
+M010704,3,M0107,보수/보강관리,,/BD/RepairHistory.aspx,Y,Y,,34
+M010705,3,M0107,안전점검관리,,/BD/SafeHistory.aspx,Y,Y,,35
+M010706,3,M0107,공사내역관리,,/BD/ConstructMngV2.aspx,Y,Y,,42
+M0112,2,M01,순찰관리,,,N,N,,10
+M011201,3,M0112,순찰지점관리,,/PT/PatrolPointManage.aspx,N,Y,,1
+M011202,3,M0112,순찰코스관리,,/PT/PatrolCourseManage.aspx,N,Y,,2
+M011203,3,M0112,순찰결과관리,,/PT/PatrolResultMngV2.aspx,N,Y,,3
+M0113,2,M01,업체관리,NULL,,Y,N,,8
+M011301,3,M0113,업체계약관리,NULL,/JC/JointCorpContract.aspx,Y,Y,,2
+M011302,3,M0113,업체평가관리,NULL,/JC/JointCorpScore.aspx,Y,Y,,3
+M011303,3,M0113,업체평가현황,NULL,/JC/JointCorpScoreSts.aspx,Y,Y,,4
+M011304,3,M0113,평가기준관리,NULL,/JC/JointCorpEvalBasis.aspx,Y,Y,,5
+M011305,3,M0113,업체관리,NULL,/AD/JointCorpManage.aspx,Y,Y,,1
+M02,1,FMS,에너지관리,energy,,Y,N,에너지정보를 관리합니다.,3
+M0201,2,M02,기본정보관리,,,Y,N,,1
+M020101,3,M0201,계량기등록,,/MC/MeterReg.aspx,Y,Y,,1
+M020102,3,M0201,사용가등록,,/MC/ConsumerReg.aspx,Y,Y,,2
+M020103,3,M0201,사용가별계량기등록,,/MC/ConsumerMeterManage.aspx,Y,Y,,3
+M0202,2,M02,검침/고지관리,,,Y,N,,2
+M020201,3,M0202,일별검침관리,,/MC/MeterCheck.aspx,Y,Y,,21
+M020202,3,M0202,월별고지관리,,/MC/EnergyUse.aspx,Y,Y,,22
+M020204,3,M0202,자동고지생성,,/MC/AutoBillingV2.aspx,Y,Y,,23
+M020205,3,M0202,연간 고지금액 현황,NULL,/MC/EnergyAmtSts.aspx,Y,Y,,24
+M0204,2,M02,에너지 관리설정도구,,,Y,N,,5
+M020401,3,M0204,에너지 목표 설정,,/EN/EnergyPlanManage.aspx,Y,Y,,2
+M020402,3,M0204,에너지 관리비 설정,,/EN/EnergyCostManage.aspx,Y,Y,,3
+M020403,3,M0204,에너지 소비 목표/실적 관리,NULL,/MC/EnergyCostPlanMmg.aspx,Y,Y,,3
+M020404,3,M0204,에너지 사용량 등록,NULL,/MC/EnergyConsumeMmg.aspx,Y,Y,,4
+M0205,2,M02,에너지 추이,NULL,,Y,N,,4
+M020501,3,M0205,에너지 계획대비 사용추이,NULL,/EN/EnergyStsConsumeVsPlanDX.aspx,Y,Y,,3
+M020502,3,M0205,에너지사용량 추이,,/EN/EnergyStsDx1.aspx,Y,Y,,2
+M020503,3,M0205,에너지Dashboard,,/EN/EnergyDashboardDX.aspx,N,Y,,1
+M020504,3,M0205,전기실 전력사용량 추이,NULL,/EIBS/ElectricSts1DX.aspx,Y,Y,NULL,5
+M020505,3,M0205,공급/환수 온도 현황,NULL,/EIBS/EquipTEMPSts1ChartDX.aspx,N,Y,,6
+M020506,3,M0205,일일 설비가동시간 그래프,NULL,/EIBS/EquipRunStsChartDX.aspx,N,Y,,7
+M020507,3,M0205,일일설비가동시간그래프,NULL,/EIBS/EquipRunStsChartDX.aspx,Y,Y,,8
+M03,1,FMS,공간관리,space,,Y,N,공간정보를 관리합니다.,5
+M0301,2,M03,도면관리,,,Y,N,,1
+M030101,3,M0301,도면등록/개정관리,,/DR/DWGReg.aspx,Y,Y,,2
+M030102,3,M0301,도면출력관리,,/DR/DWGSearch.aspx,Y,Y,,3
+M0302,2,M03,문서정보관리,,,Y,N,,2
+M030201,3,M0302,기술자료관리,,/DR/FileManageV2.aspx,Y,Y,,1
+M030202,3,M0302,기술자료분류관리,NULL,/DR/FileCodeReg.aspx,Y,Y,,2
+M05,1,FMS,통계/현황,stat,,Y,N,통계/현황을 조회합니다,7
+M0501,2,M05,작업관리,,,Y,N,,1
+M050102,3,M0501,작업진행현황,,/WR/WorkScheduleList.aspx,Y,Y,,46
+M050103,3,M0501,작업실적현황,,/WR/WorkCompleteList.aspx,Y,Y,,47
+M050104,3,M0501,작업 일/주/월보,,/RP/WR_WorkResult.aspx,Y,Y,,48
+M050105,3,M0501,점검보고서 출력,,/WR/WRCheckListRpt.aspx,Y,Y,,49
+M050106,3,M0501,설비별 작업이력,,/WR/WorkHistOfEquip.aspx,Y,Y,,50
+M050107,3,M0501,위치별 작업이력,,/WR/WorkHistOfLoc.aspx,Y,Y,,51
+M050111,3,M0501,일자별 작업결과 집계표,,/WR/WorkResultAggDD.aspx,Y,Y,,53
+M050112,3,M0501,작업분류별 실적집계표,,/WR/WorkResultAggCategory.aspx,Y,Y,,54
+M050113,3,M0501,설비별 실적집계표,,/WR/WorkResultAggEquip.aspx,Y,Y,,55
+M050114,3,M0501,서비스요청 처리현황,NULL,/WR/ReqServiceList.aspx,Y,Y,,45
+M0502,2,M05,설비관리,,,Y,N,,2
+M050203,3,M0502,설비현황,,/EQ/EquipList.aspx,Y,Y,,5
+M050204,3,M0502,설비가동현황조회,,/EQ/EquipRunSts1.aspx,N,Y,,6
+M050205,3,M0502,설비가동시간조회(주간),,/EQ/EquipRunSts2.aspx,N,Y,,7
+M050208,3,M0502,설비현황표,,/EQ/EquipSts1.aspx,Y,Y,,13
+M050209,3,M0502,월/년간 설비가동시간 현황,NULL,/EQ/EquipRunSts3.aspx,N,Y,,9
+M050210,3,M0502,설비 가동현황,NULL,/EQ/EquipUseList.aspx,N,Y,,10
+M0503,2,M05,자재관리,,,Y,N,,3
+M050305,3,M0503,자재수불현황,,/MT/MaterialSubulList.aspx,Y,Y,,11
+M050306,3,M0503,창고별자재재고현황,,/MT/MaterialWareList.aspx,Y,Y,,12
+M050307,3,M0503,자재구분별 재고현황,,/MT/MaterialMtrlGbList.aspx,Y,Y,,13
+M050308,3,M0503,자재사용 상세정보,,/MT/MaterialUseInfo.aspx,Y,Y,,14
+M0504,2,M05,공구관리,NULL,,Y,N,,4
+M050401,3,M0504,공구현황,NULL,/TL/ToolList.aspx,Y,Y,,1
+M050402,3,M0504,공구현황표,NULL,/TL/ToolSts1.aspx,Y,Y,,2
+M050403,3,M0504,비품현황,NULL,/TL/ToolEtcList.aspx,Y,Y,,3
+M050404,3,M0504,비품현황표,NULL,/TL/ToolEtcSts1.aspx,Y,Y,,4
+M0505,2,M05,공사관리,NULL,,Y,N,NULL,5
+M050501,3,M0501,건물공사대장,NULL,/BD/BldConstructListRpt.aspx,Y,Y,NULL,61
+M050502,3,M0501,건물보수/보강대장,NULL,/BD/BldRepairListRpt.aspx,Y,Y,NULL,62
+M050503,3,M0501,건물안전진단대장,NULL,/BD/BldSaftyInspectListRpt.aspx,Y,Y,NULL,63
+M0506,2,M05,순찰 통계/현황,,,Y,N,NULL,8
+M050601,3,M0506,순찰결과상세조회,,/PT/PatrolResultList2.aspx,Y,Y,NULL,1
+M050602,3,M0506,일자별순찰집계현황,,/PT/PatrolResultAgg.aspx,Y,Y,NULL,2
+M050603,3,M0506,순찰지점별집계현황,,/PT/PatrolResultAgg2.aspx,Y,Y,NULL,3
+M050604,3,M0506,순찰보고서,,/PT/PatrolResultList.aspx,Y,Y,NULL,4
+M06,1,FMS,입주사서비스,reqservice,,N,N,입주사 서비스를 관리합니다.,4
+M0601,2,M06,관리자기능,NULL,NULL,Y,N,NULL,40
+M060101,3,M0601,회원정보관리,NULL,/RC/MemberManage.aspx,Y,Y,NULL,41
+M060104,3,M0601,불편사항처리,NULL,/RC/HandleDiscontent.aspx,Y,Y,NULL,44
+M060107,3,M0601,입주사관리,,/RC/DeptManage.aspx,Y,Y,,47
+M0602,2,M06,시설연장사용관리,NULL,NULL,Y,N,NULL,60
+M060201,3,M0602,시설Zone정보관리,NULL,/RC/BuildingZone.aspx,Y,Y,NULL,61
+M060202,3,M0602,시설연장사용 승인,NULL,/RC/ConfirmFaciExtend.aspx,Y,Y,NULL,62
+M0606,2,M06,예약관리,NULL,NULL,Y,N,NULL,50
+M060602,3,M0606,공용시설예약,NULL,/RN/RoomReservManage.aspx,Y,Y,NULL,52
+M060604,3,M0606,공용시설등록,NULL,/RN/RoomReg.aspx,Y,Y,NULL,54
+M060605,3,M0606,대여장비 예약관리,NULL,/RN/MachineReservManage.aspx,Y,Y,,55
+M060606,3,M0606,대여장비 등록,NULL,/RN/MachineReg.aspx,Y,Y,,56
+M08,1,FMS,시스템관리,system,,Y,N,시스템 정보를 관리합니다.,8
+M0801,2,M08,기준정보관리,,,Y,N,,9
+M080101,3,M0801,설비계층관리,,/EQ/EquipCode.aspx,Y,Y,,10
+M080102,3,M0801,자재계층관리,,/MT/MaterialCode.aspx,Y,Y,,11
+M080103,3,M0801,작업분류관리,,/AD/JobTypeReg.aspx,Y,Y,,12
+M080104,3,M0801,도면분류관리,,/DR/DWGCodeReg.aspx,Y,Y,,13
+M080105,3,M0801,공종코드관리,,/BD/ConstructCode.aspx,Y,Y,,14
+M080106,3,M0801,공통코드관리,,/AD/CodeManage.aspx,Y,Y,,15
+M080107,3,M0801,휴무일등록,NULL,/RT/HolidayReg.aspx,Y,Y,,16
+M0802,2,M08,권한관리,,,Y," ",,20
+M080201,3,M0802,프로그램메뉴 관리,,/AD/ProgMenuManage.aspx,Y,Y,,21
+M080202,3,M0802,사용자별 메뉴권한 설정,,/AD/SetMenuAccess.aspx,Y,Y,,22
+M0803,2,M08,작업자관리,,,Y,N,,30
+M080301,3,M0803,작업자정보관리,,/AD/StaffReg.aspx,Y,Y,,31
+M080302,3,M0803,선임/해임관리,,/CE/AppointManage.aspx,Y,Y,,32
+M080303,3,M0803,법정교육관리,,/CE/EducationManage.aspx,Y,Y,,33
+M080304,3,M0803,로그 현황,,/AD/LogList.aspx,Y,Y,,34
+M0804,2,M08,공지사항관리,NULL,,Y,N,,31
+M080401,3,M0804,공지사항관리,NULL,/AD/BoardManage.aspx,Y,Y,,1
+M080403,3,M0804,파일검색,NULL,/AD/SearchFileMng.aspx,Y,Y,,3

@@ -162,22 +162,31 @@ ul,li{
 }
 .header_menu{
     display: flex;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
     position: relative;
     flex:20;
     justify-content: left;
     align-items: center;
 }
-
+.header_menu:hover{
+    overflow-x: auto;
+}
+.header_menu::-webkit-scrollbar{
+    height: 7px;
+}
+.header_menu::-webkit-scrollbar-thumb{
+    background-color: #484e55;
+}
 .header_menu,.admin_btn{
     height: 60px;
     /* background-color: #32363b; */
     background-color: #272630;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
 /* 상단메뉴 크기 설정 */
 .header_menu>div{
-    width: 140px;
+    flex: 1 0 100px;
     height: 60px;
     line-height: 60px;
     text-align: center;
@@ -218,7 +227,7 @@ ul,li{
     box-sizing: border-box;
     color: white;
     border: 1px solid gray;
-    background: url(../back_img/EM.png) no-repeat;
+    background: url(../back_img/BIS.png) no-repeat;
     background-position: 55% 50%;
 }
 .fas{
@@ -228,4 +237,27 @@ ul,li{
 /* 폰트 색깔 설정 */
 .submenu>ul,.box,.active_top_menu,.header_menu,.admin_btn{
     color: rgb(235, 235, 235);
+}
+/* 아이콘 */
+.icon{
+    display: inline-block;
+ 
+}
+.park{
+    width: 20px;
+    height: 15px;
+    background: url(../image/Parking\ control.png) no-repeat center;
+}
+.cctv{
+    width: 20px;
+    height: 15px;
+    background: url(../image/CCTV.png) no-repeat center;
+}
+.eves{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 2px;
+    background: url(../image/escalator.png) no-repeat center;
+    background-size: contain;
 }

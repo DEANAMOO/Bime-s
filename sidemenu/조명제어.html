@@ -1,0 +1,36 @@
+<body>
+    <li><button class="box box1">조명제어</button>
+        <ul class="toggle_menu">
+            <li>1층</li>
+            <li>2층</li>
+            <li>3층</li>
+            <li>4층</li>
+            <li>5층</li>
+        </ul>
+    </li>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var href = window.location.pathname.replace('/', '');
+        console.log(href);
+        $(".box").click(function () {
+            $(this).toggleClass('unfoldbox');
+            $(this).next().slideToggle(160);
+            return false;
+        });
+        $('a').click(function () {
+            var value = $(this).attr('value')
+            $.ajax({
+                url: value,
+                dataType: "text",
+                success: function (data) {
+                    $('a').removeClass('active');
+                    $(".maincontent").html(data);
+                    $('a[value="' + value + '"]').toggleClass('active');
+                }
+            });
+        })
+    })
+
+</script>

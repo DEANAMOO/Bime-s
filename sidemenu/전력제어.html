@@ -1,0 +1,41 @@
+<body>
+    <li><button class="box box1">전력제어</button>
+        <ul class="toggle_menu">
+            <li><a value='text/1234.txt'>대시보드</a></li>
+            <button class="box box2">수배전 설비</button>
+            <ul class="toggle_menu">
+                <li>특고압</li>
+                <li>고압</li>
+                <li>저압</li>
+            </ul>
+            <li>전열분전반</li>
+            <li>전등분전반</li>
+            <li>동력분전반</li>
+        </ul>
+    </li>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var href = window.location.pathname.replace('/', '');
+        console.log(href);
+        $(".box").click(function () {
+            $(this).toggleClass('unfoldbox');
+            $(this).next().slideToggle(160);
+            return false;
+        });
+        $('a').click(function () {
+            var value = $(this).attr('value')
+            $.ajax({
+                url: value,
+                dataType: "text",
+                success: function (data) {
+                    $('a').removeClass('active');
+                    $(".maincontent").html(data);
+                    $('a[value="' + value + '"]').toggleClass('active');
+                }
+            });
+        })
+    })
+
+</script>
