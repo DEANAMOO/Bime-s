@@ -150,7 +150,7 @@ ul,li{
     text-align: center;
 }
 .active{
-    color: rgb(255, 119, 119);
+    color: red;
 }
 /* 상단 메뉴 */
 .header{
